@@ -85,7 +85,7 @@ contract PrivateFT is SemaphoreGroups {
     }
 
     /// @notice Create a poll for the Friend.Tech key holders of your account
-    function createpoll(uint256 pollId, uint256 encryptionKey) external {
+    function createPoll(uint256 pollId, uint256 encryptionKey) external {
         // It will revert if pollId already exists
         _createGroup(pollId, TREE_DEPTH);
         $polls[pollId].coordinator = msg.sender;
